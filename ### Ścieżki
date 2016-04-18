@@ -1,0 +1,123 @@
+### Zadanie 1
+
+Przy użyciu ścieżki i narzędzia pióro narysuj:
+- dom
+- płot
+- samochód
+
+Przykład <a href="http://www.clker.com/cliparts/8/9/9/d/11949855741697952186small_house_01.svg.hi.png">domu</a>, inny <a href="http://4vector.com/i/free-vector-my-house-clip-art_106439_My_House_clip_art_hight.png"> dom</a>
+Plik zapisz pod nazwą: HOME.SVG
+
+### Zadanie 2
+
+Przy użyciu narzędzia kaligrafia wykonaj napis
+<a href="https://www.youtube.com/watch?v=6J1N6Zrpipg">zgodnie z tutorialem</a>
+
+Plik zapisz pod nazwą KALI.SVG
+
+
+### Zadanie 3
+
+Utwórz pingwina
+
+<a href="http://creativenerds.co.uk/wp-content/uploads/2012/07/penguinillustration.jpg">pingwina</a>
+
+Plik zapisz pod nazwą PIN.SVG
+
+### Ścieżki
+Scieżki w przeciwienstwie do kształtów regularnych nie mają zdefiniowanej struktury. Często są to proste lub krzywe, w których możemy wyróżnić początek lub koniec. 
+
+#### Ołówek
+
+Podstawowe narzedzie. Skrót ```F6```. 
+
+Tryb pracy :
+- krzywa Beziera
+- krzywe Spiro
+
+W obu przypadkach możemy kontrolować stopień wygładzania ścieżki.
+Poprawia ono wygląd ścieżki, jednak zbyt wysoka wartość może zdeformować jej kształt. 
+
+
+
+##### Pióro
+
+Pod pewnym względem podobne do narzędzia ___ołówek___. Podobieństwo : można rysować proste. 
+Krzywe Beziera o zadanym kształcie są możliwe do narysowania. 
+
+Krzywe Beziera to krzywe parametryczne, co oznacza, że każdy punkt krzywej wyznaczany jest odpowiednią funkcją matematyczną z parametrami. Krzywa jest zdefiniowana poprzez ```węzły końcowe``` krzywej (punkty końcowe) oraz ich (punkty kontrolne). Dzięki tym ostatnim możliwe jest wyginanie krzywej, czego wynikiem jest zmiana współrzędnych punktów pomiędzy punktami końcowymi. 
+
+Krzywe Beziera zostały stworzone i po raz pierwszy wykorzystane w celu uproszczenia modelowania konstrukcji samochowych. Twórcami krzywej Beziera są Pierre Bezier (francuski inżynier furmy Renault), oraz Paul de Caseljau, projektant firmy Citroen. 
+
+
+Najczęściej mamy do czynienia z dwoma typami krzywej : ```kwadratową``` (tj. krzywa drugiego stopnia) - z jednym punktem kontrolnym i '''sześcienną''' z dwoma punktami kontrolnymi.
+
+Liczba węzłów końcowych pojedyńczek krzywej jest stała i wynosi dwa.
+
+Tryby pracy pióra:
+- krzywe Beziera
+- krzywe Spiro
+- sekwencja linii prostych
+- sekwencja linii przyosiowych
+
+
+Jak narysować linie?
+
+Skrót: ```Shift+F6```
+Ctrl - skokowa zmiana kąta.
+Shift - pozwala na rysowanie prostej przedłużającej poprzednią linię
+
+Jak narysować krzywą Beziera?
+Klik myszy, przesunąć na wybrane miejsce, puścić mysz. 
+Początkiem krzywej jest miejsce PPM. Miejscem zwolnienia jest punkt sterujący. 
+
+Gdy następnie użyjemy PPM i nie porusyzmy myszką, utworzymy węzeł. Jednak gdy ruszymy myszką, będzie to węzeł z punktem kontrolnym. 
+
+
+Aktualnie tworzony fragment ścieżki jest koloru czerwonego, pozostałe mają kolor zielony. Po zakończeniu rysowania zostają pokazane wyłącznie węzły krańcowe narysowanego obiektu. 
+
+Shift+U - aktualny odcinek na krzywą
+Shift+L - aktualny odcinek na prosty
+Del - usuwa aktualnie rysowany odcinek
+Klawisze strzałek - przesunięcie
+
+Tutorial: https://www.pinterest.com/pin/280700989248634656/
+
+#### Kaligrafia
+
+Sztuka ładnego pisania. 
+Skrót: ```Ctrl+F6```.
+Ścieżka jest jedynym typem obiektu, który nie przechodzi o stworzeniu w tryb edycji.
+
+Szerokość: 1 do 100. Relatywne do obszaru płótna.
+Pocienienie - parametr określający w jakim stopniu grubość linii zależy od szybkości pociągnięcia
+Kąt - kąt ułożenia przyboru
+Ułożenie - kąt nachylenia od bieżącego ułożenia. 100 stały kąt, 0 prostopadły
+Zakończenie - 0 do 5, 1 półkoliste, 5 półeliptyczne
+Drżenie - realistyczne linie. dodaje losowy czynnik wpływający na szerokość linii
+Poruszenie - określa, w jakim stopniu powierzchnia, na której rysujemy (wirtualna kartka) porusza się wraz z piórem
+Masa - opóźnienie w trakcie rysowania
+
+Śledzenie jasnośći tła poprzez szrokość pióra. Uzależnia grubość rysowanej linii od jasności tła pod kursowem. Ciemny kolor zwiększa, a jaśniejszy zmniejsza szrtokość rysoawanej linii. 
+
+Śledzenie ścieżki prowadnicy - zaznaczamy obiekt, klikamy CTRL. 
+
+Połączenie rysowanej ścieżki z obiektem - zaznaczamy obiekt, klikamy Shift
+Różnica obiektu ze ścieżką - zaznaczamy obiekt, klikamy Alt.
+
+Strzałki- <> szerokość ścieżki, góra doł kąt nachylenia.
+
+
+
+#### Przekształcenie obiektu i konturu w ścieżkę.
+
+Dla przypomnienia - wszystkie obiekty poza tekstem, prostokątem i grafiką rastrową są tworzone za pomocą ścieżek. 
+
+Shift+ctrl+c - Sciezka/ Obiektu w ścieżkę
+CTRL+alt+C - Sciezka/Kontur w sciezke
+
+
+#### Duplikowanie
+
+Ctrl+D
+Gdy przekształcamy obiekt, np. pochylamy, odwracamy i w trakcie tej operacji będziemy trzymali spację. 

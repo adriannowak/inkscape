@@ -1,0 +1,63 @@
+### InkScape
+
+Grafika wektorowa (obiektowa) – jeden z dwóch podstawowych rodzajów grafiki komputerowej, w której obraz opisany jest za pomocą figur geometrycznych (w przypadku grafiki dwuwymiarowej) lub brył geometrycznych (w przypadku grafiki trójwymiarowej), umiejscowionych w matematycznie zdefiniowanym układzie współrzędnych, odpowiednio dwu- lub trójwymiarowym. 
+
+Druga nazwa grafiki wektorowej – grafika obiektowa – związana jest z faktem, iż obraz opisany jest za pomocą tzw. obiektów, które zbudowane są z podstawowych elementów nazywanych prymitywami, czyli prostych figur geometrycznych takich jak odcinki, krzywe, okręgi, wielokąty. Każdy z prymitywów opisywany jest za pomocą parametrów, np. w przypadku odcinka – współrzędnych jego końców, a w przypadku okręgu – współrzędnych środka i długości promienia. Obiekty takie mają także określone atrybuty mówiące np. o grubości i kolorze linii, kolorze wypełnienia figury lub wypełnieniu niejednolitym jak wypełnienie gradientem albo wzorem, stopniu przezroczystości. Atrybuty zależą głównie od stosowanego standardu opisu grafiki wektorowej.
+
+Nazwa Inkscape pochodzi od połączenia dwóch słów: Ink (pol. tusz) oraz
+Scape (pol. krajobraz), co jest nawiązaniem do grafiki utworzonej z nało-
+żonych na siebie elementarnych kształtów.
+
+Inkscape — rozpowszechniany na otwartej licencji GNU GPL — jest
+edytorem dwuwymiarowej grafiki wektorowej o dużych możliwościach,
+nierzadko zbliżonych do tych oferowanych przez jego komercyjne odpo-
+wiedniki. Udostępniany jest dla platform systemowych Windows, Linux,
+Mac OS X, a rozwijany przez rzeszę entuzjastów z całego świata. Doczekał
+się także wielu wersji językowych, w tym także polskiej.
+
+Pierwowzorem Inkscape’a był obecnie nierozwijany już program Sodi-
+podi, po którym Inkscape odziedziczył sporą część rdzenia aplikacji, a co
+za tym idzie — i funkcji. Rozpowszechnianie programu na licencji GNU
+GPL (rysunek 1.1) oznacza, że jakiekolwiek jego wykorzystanie na potrzeby
+prywatne czy też komercyjne jest w pełni darmowe. Nie bez znaczenia jest
+również zastosowanie jako macierzystego formatu zapisu standaryzowa-
+nego, otwartego formatu zapisu grafiki wektorowej SVG (ang. Scalable
+Vector Graphics — skalowalna grafika wektorowa).
+
+Sodipodi – program do tworzenia grafiki wektorowej. Jest wolnym oprogramowaniem rozpowszechnianym na licencji GNU GPL[1]. Nazwa programu odpowiada słowu "miszmasz" w języku estońskim. Głównym autorem Sodipodi jest Lauris Kaplinski[3] i kilka innych osób które przyczyniły się do projektu. Aktualnie projekt nie jest rozwijany. Następcą Sodipodi jest Inkscape, który oddzielił się pod koniec 2003[4]. Sodipodi jako macierzystego formatu zapisu plików używa SVG, lecz posiada też funkcję eksportowania do PNG. Potrafi wyświetlać grafikę używając wygładzania, korzysta z kanału alfa dla uzyskania przezroczystości, obsługuje czcionki wektorowe.
+
+
+Ze względu na charakter grafiki wektorowej Inkscape służy przede wszyst-
+kim do tworzenia logo, ikon, wektorowych tapet, wykresów, diagramów,
+schematów, map czy komiksów — czyli wszędzie tam, gdzie nie ma ko-
+nieczności manipulowania skomplikowanymi światłocieniami i tonalnym
+przejściem barw.
+
+Bynajmniej nie chcę tutaj nikogo przekonywać, że Inkscape jest idealnym
+edytorem pozbawionym wad, o możliwościach przewyższających rozwią-
+zania komercyjne. Jednak z całą pewnością wbudowane funkcje i ogromny
+potencjał czynią go poważną konkurencją takich programów, jak Corel-
+Draw, Adobe Illustrator, Microsoft Blend czy Xara Designer.
+
+
+Zasadnicza różnica między grafiką rastrową a wektorową polega na spo-
+sobie tworzenia wynikowego obrazu. W tej pierwszej podstawowym ele-
+mentem jest pojedynczy piksel (punkt, px), a finalny obraz jest wynikiem
+ułożenia — różniących się współrzędnymi i barwą — wielu pikseli w postaci
+siatki na płaszczyźnie rysunku.
+
+Grafika wektorowa jest opisana nie za pomocą ułożonych obok siebie
+pikseli, lecz za pomocą naniesionych na płaszczyznę elementarnych figur
+geometrycznych, zwanych prymitywami (ang. primitives).
+Zastosowany w Inkscapie format grafiki wektorowej SVG przewiduje sześć
+prymitywów, którymi są: prostokąt, elipsa, okrąg, linia, linia łamana
+oraz wielokąt. Dodatkowym kształtem jest ścieżka, formalnie niebędąca
+prymitywem, która jednak pozwala na tworzenie bardziej zaawansowa-
+nych kształtów, niemożliwych do uzyskania inną metodą. 
+
+Każdy z prymitywów posiada szereg matematycznie zapisanych właściwości, które ściśle
+definiują jego kształt i położenie, a finalny obraz składa się z wielu naniesio-
+nych na płaszczyznę prymitywów o odmiennych właściwościach. Dodatko-
+wo możemy wykonać na każdym z nich szereg operacji, takich jak chociażby
+zastosowanie filtra, nałożenie maski czy ustawienie przezroczystości,
+co daje ogromne możliwości manipulowania tworzonym obrazem.
