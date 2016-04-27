@@ -2,29 +2,62 @@
 <!-- saved from url=(0022)http://localhost:1337/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <title>t3.md</title>
+  <title>t4.md</title>
   <link rel="stylesheet" href="./t3_files/github-markdown.css">
   <link rel="stylesheet" href="./t3_files/style.css">
   <link rel="stylesheet" href="./t3_files/github.min.css">
 
 <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
 <body>
-  <div class="markdown-body"><h3 id="zadanie-1">Zadanie 1</h3>
-<p>Przygotuj grafikę: <a href="http://vector.org.pl/inkscape/t4/kwiaty.png">kwiaty</a></p>
-<p>Plik zapisz jako SVG.</p>
+  <div class="markdown-body"><h1 id="vim-syntax-conf">vim: syntax=conf</h1>
+<!-- http://linuxgrrl.com/learn/Introduction_To_Inkscape -->
+<h3 id="zadanie-0">Zadanie 0</h3>
+<p>Przygotuj plansze do gry.</p>
+<p>Przykład: <img src="./t3_files/inkscape.png"></p>
+<p>'''
+cursor: url(plik_z_grafika.svg);</p>
+<p>'''</p>
+<h3 id="zadanie-1">Zadanie 1</h3>
+<p>Utworz 4 pliki SVG na podstawie dostarczonej <a href="http://vector.org.pl/inkscape/t42/text.png">grafiki</a>.</p>
 <h3 id="zadanie-2">Zadanie 2</h3>
-<p>Przygotuj grafikę: <a href="http://vector.org.pl/inkscape/t4/noc.png">noc</a></p>
-<p>Plik zapisz jako SVG.</p>
+<p>Przekształć tekst na obiekty. Zmodyfikuj kształt według schematu.</p>
+<p><img src="./t3_files/hello.png"></p>
 <h3 id="zadanie-3">Zadanie 3</h3>
-<p>Przygotuj grafikę: <a href="http://vector.org.pl/inkscape/t4/napis.png">napis</a></p>
-<p>Plik zapisz jako SVG.</p>
-<h3 id="zadanie-4">Zadanie 4</h3>
-<p>Przygotuj grafikę: <a href="http://vector.org.pl/inkscape/t4/invaders.png">Invaders</a>
-oraz <a href="http://vector.org.pl/inkscape/t4/invaders2.jpg">Invaders2</a> (wybierz 3)</p>
-<p>Plik zapisz jako SVG.</p>
+<p>Przygotuj <a href="http://vector.org.pl/inkscape/t42/ray.png">napis</a></p>
 <h3 id="podsumowanie">Podsumowanie</h3>
-<p>Dostępne operacje na ścieżce:</p>
-<p><img src="./t3_files/operacje.png"></p>
+<p>Tekst możemy nanosić na płotno na kilka sposobów:</p>
+<ul>
+<li>narzędzie <strong>Tekst</strong> (ikona "A")</li>
+<li><strong>F8</strong> lub <strong>T</strong></li>
+</ul>
+<p>Kliknięcie na płótno umożliwia wprowadzenie tekstu.
+Możemy edytować go w dowolnej chwili (tryb edycji)</p>
+<p>Jeśli aktywujemy narzędzie <em>tekst</em> i najedziemy na obiekt, wówczas pojawi się niebieska ramka.</p>
+<p>Wygodniejszym sposobem wprowadzania tekstu jest skorzystaie z okna dialogowego <em>Tekst i czcionka</em>
+Okno możemy otworzyć skrótem <strong>Shift+Ctrl+T</strong>, z menu <em>Tekst/Tekst i czcionka</em> lub klikając ikonę <strong>T</strong> na listwie poleceń. </p>
+<p align="center">
+ <code>Aby skorzystać z tego okna obiekt nie musi być w trybie edycji.</code>
+</p>
+
+
+
+<h3 id="formatowanie-tekstu">Formatowanie tekstu</h3>
+<p>Formatując tekst możemy korzystać z listwy kontroli narzędzia tekst lub okna dialogowego <strong>Tekst i czcionka</strong>, lub odpowiednich skrótów klawiszowych. </p>
+<p>Dostęp do pełnej listy funkcji formatowania mamy wyłącznie z poziomu listwy kontroli. </p>
+<p>Jeżeli żaden ze znaków nie jest podświetlony, formatowany jest cały tekst. W przeciwnym razie formatujemy jedynie zaznaczony obszar. </p>
+<p>Kerning - określa odstęp pomiędzy znakami, które znajdują sie po lewej i prawej stronie kursora lub pomiędzy zaznaczeniem a znakiem po lewej stronie. Kerning działa niezależnie od odstępu między znakami. </p>
+<p>Znaki <em>Unicode</em> wprowadzamy na płotno inaczej niż zwykły tekst. Gdy podczas dodawania tekstu użyjemy skrótu <strong>Ctrl+U</strong>, uruchomimy tryb pracy <em>Unicode</em>, o czym jesteśmy informowani na listwie statusu.</p>
+<p>Przykłady:</p>
+<ul>
+<li>U+2622</li>
+<li>U+262D</li>
+<li>U+267C</li>
+</ul>
+<p>Innym sposobem na wstawienie znaków specjalnych jest skorzystanie z dokowanego okna <em>Glify</em>. 
+Okno możemy uruchomić wylącznie z menu <strong>Tekst/Glify</strong>. </p>
+<h3 id="wstawianie-tekstu-do-kszta-tu">Wstawianie tekstu do kształtu</h3>
+<p>Dzięki zastosowaniu elementu <code>&lt;flowRoot&gt;</code>. On właśnie pozwala na określenie obszaru, w którego granicach tekst będzie wyświetlany.  </p>
+<p>Są dwa sposoby na uzyskanie opisywanego efektu. Pierwszy polega na zaznaczeniu obiektu, który ma wyznaczać grafice tekstu oraz obiektu tekstowego. Użycie skrótu <em>Alt+W</em>, a także <strong>Tekst/Wprowadź tekst do kształtu</strong>. Operacja ta jest odwracalna, służy do tego skrót <em>Shift+Alt+W</em> lub menu <strong>Tekst/Uwolnij tekst</strong></p>
 </div>
 
   <script src="./t3_files/jquery.min.js"></script>
