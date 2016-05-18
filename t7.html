@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:1337/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>t7.md</title>
+  <link rel="stylesheet" href="./t7_files/github-markdown.css">
+  <link rel="stylesheet" href="./t7_files/style.css">
+  <link rel="stylesheet" href="./t7_files/github.min.css">
+
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body>
+  <div class="markdown-body"><h3 id="zadanie-1">Zadanie 1</h3>
+<p>Przygotuj dwa obiekty koło i prostokąt.
+Zmien kolor koła na #FAFAFA po upływie 2sekund.
+Kolor prostokątu zmieniaj co 500ms.</p>
+<h3 id="zadanie-2">Zadanie 2</h3>
+<p>Przygotuj animację sygnalizacji świetlnej w przejściem dla pieszych.</p>
+<h3 id="zadanie-3">Zadanie 3</h3>
+<p>Przygotuj</p>
+<h3 id="stosowane-znaczniki">Stosowane znaczniki</h3>
+<p>animate - umożliwia zmianę wartości atrybutów skalarnych w czasie
+set - stosowany do zmiany na wartości nie numeryczne np. widoczność
+animateMotion - przesunięcie elementu wzdłuż ścieżki
+animateColor - modyfikacja koloru, pozostałych właściwości (wycofany)</p>
+<h3 id="inicjowanie-animacji">Inicjowanie animacji</h3>
+<p>Bez znaczenia, jaki typ animacji wybierzesz - za każdym razem należy dodać target animacji. Należy użyć atrybutu xlink:href, gdzie jako wartość podamy referencję URI (w ramach dokumentu SVG).</p>
+<p>Przykład:</p>
+<pre class="lang-html hljs xml"><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">rect</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"shape"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">animate</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#shape"</span>/&gt;</span>
+</code></pre>
+<p>Alternatywnie, animację możemy zawrzeć wewnątrz elementu. Wówczas nie zachodzi potrzeba wskazywania hiperłącza.</p>
+<pre class="lang-html hljs xml"><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">rect</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"shape"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">animate</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">rect</span>&gt;</span>
+</code></pre>
+<h3 id="set">set</h3>
+<p>Przydatne atrybuty:</p>
+<p>begin, dur, end, min, max, restart, repeatCount, repeatDur, fill</p>
+<h3 id="animate">animate</h3>
+<p>definiuje w jaki sposob animacja zmienia się w czasie, podczas trwania.</p>
+<p>from
+to
+dur
+repeatCount</p>
+<h3 id="animatetransform">animatetransform</h3>
+<p>allowing animations to control translation, scaling, rotation and/or skewing</p>
+<p>Każdy ze znaczników posiada atrybut bazowy '''attributeName'''. Umożliwia przechowanie nazwy właściwości, jaką animujemy.</p>
+<p>Np. jeżli chcemy zmodyfikować środek elemenu '''circle''' (w kodzie cx), wówczas 'attributeName=cx'</p>
+<p>AttributeName przyjmuje jedną wartość, a nie listę. Można przeprowaddzić tylko animację na elemencie. A gdy chcemy więcej? Należy dodać kolejny element związany z animacją. </p>
+<p>Kolejnym krokiem jest wprowadzenie przestrzeni nazw, do której należy zastosowany atrybut. SVG rozróżnia dwa : CSS oraz SVG. </p>
+<p><a href="https://www.w3.org/TR/SVG2/styling.html#PresentationAttributes">podział atrybutów</a></p>
+<p>Jeżeli nie podamy przestrzeni nazw, wówczas ustawiona jest ona na automatyczną (auto). Przeglądarka najpierw sprawdza CSS, dopiero później SVG.</p>
+<p>Przykład animacji:</p>
+<pre class="lang-html hljs xml"><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">rect</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">animate</span> <span class="hljs-attribute">attributeType</span>=<span class="hljs-value">"CSS"</span> <span class="hljs-attribute">attributeName</span>=<span class="hljs-value">"opacity"</span> <span class="hljs-attribute">from</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">dur</span>=<span class="hljs-value">"5s"</span> <span class="hljs-attribute">repeatCount</span>=<span class="hljs-value">"indefinite"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">rect</span>&gt;</span>
+</code></pre>
+<h3 id="time-units">time units</h3>
+<p>Description
+h    Hours
+min    Minutes
+s    Seconds
+ms    Milliseconds
+:w</p>
+<h3 id="podsumowanie">Podsumowanie</h3>
+<p>Inkscape nie wspiera tworzenia amimacji. 
+Ich stworzenie możliwe jest poprzez zastosowanie aplikacji GUI (zewnętrzne programy lub jako pluginy do Inkscape) a także przy użyciu skryptów.</p>
+<p>Graficzne przykłady:</p>
+<ul>
+<li>JessyInk</li>
+<li>XIA</li>
+<li>GIMP</li>
+</ul>
+<p>Animacje przy użyciu skryptów możemy stworzyć na 3 sposoby:</p>
+<ul>
+<li>SMIL</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+</ul>
+<h4 id="smil">SMIL</h4>
+<p>SMIL (<strong>S</strong>ynchronized <strong>M</strong>ultimedia <strong>I</strong>ntegration <strong>L</strong>anguage) podobnie jak SVG oparty jest na języku XML. Zalety: działa na Firefox i Chrome</p>
+</div>
+
+  <script src="./t7_files/jquery.min.js"></script>
+  <script src="./t7_files/socket.io.js"></script>
+  <script src="./t7_files/highlight.min.js"></script>
+  <script>
+
+    var socket = io.connect('http://localhost')
+
+    hljs.configure({languages: []})
+
+    socket.on('content', function(data){
+      $('.markdown-body').html(data)
+      $('code').each(function(_, block){
+        $(this).parent().addClass($(this).attr('class'))
+      })
+      $('pre').each(function(_, block){
+        hljs.highlightBlock(block);
+      })
+    })
+    socket.on('title', function(data){
+      $('title').html(data)
+    })
+    socket.on('kill', function(){
+      window.open('', '_self', '');
+      window.close();
+    })
+  </script>
+
+
+</body></html>
