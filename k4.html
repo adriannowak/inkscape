@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:1337/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>k4.md</title>
+  <link rel="stylesheet" href="./k4_files/github-markdown.css">
+  <link rel="stylesheet" href="./k4_files/style.css">
+  <link rel="stylesheet" href="./k4_files/github.min.css">
+
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body>
+  <div class="markdown-body"><ol>
+<li><p>Wymień sposoby inicjowania animacji (2) (2pkt)</p>
+</li>
+<li><p>Zapisz atrybut "rozpoczęcie animacji": (5 pkt)</p>
+<ul>
+<li>30 sekund</li>
+<li>pól sekundy</li>
+<li>1 sekunda po zakończeniu animacji id = abcd</li>
+<li>1 sekunda po uruchomieniu pliku SVG oraz po kliknięciu w obiekt id = abcd</li>
+<li>1 sekunda po najechaniu myszką na obiekt id = abcd</li>
+</ul>
+</li>
+<li><p>Wymień wartości atrybutu attributeName odpowiedzialne za (3 pkt):</p>
+<ul>
+<li>kolor wypełnienia</li>
+<li>kolor obramowania</li>
+<li>szerokość obramowania</li>
+</ul>
+</li>
+<li><p>Dodaj do pliku prostokąt (2pkt, 3pkt):</p>
+<ul>
+<li>zmień kolor z #FF0000 na #00FF00</li>
+<li>po zakończeniu pierwszej animacji płynnie zmień kolor (#00FF00) na #0000FF</li>
+</ul>
+</li>
+</ol>
+<h4 id="punktacja">Punktacja</h4>
+<p>MAX 15 pkt</p>
+<ul>
+<li>0-5 NDST</li>
+<li>6-7 DOP</li>
+<li>7-9 DST</li>
+<li>10-12 DB</li>
+<li>13-15 BDB</li>
+</ul>
+</div>
+
+  <script src="./k4_files/jquery.min.js"></script>
+  <script src="./k4_files/socket.io.js"></script>
+  <script src="./k4_files/highlight.min.js"></script>
+  <script>
+
+    var socket = io.connect('http://localhost')
+
+    hljs.configure({languages: []})
+
+    socket.on('content', function(data){
+      $('.markdown-body').html(data)
+      $('code').each(function(_, block){
+        $(this).parent().addClass($(this).attr('class'))
+      })
+      $('pre').each(function(_, block){
+        hljs.highlightBlock(block);
+      })
+    })
+    socket.on('title', function(data){
+      $('title').html(data)
+    })
+    socket.on('kill', function(){
+      window.open('', '_self', '');
+      window.close();
+    })
+  </script>
+
+
+</body></html>
