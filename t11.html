@@ -32,6 +32,8 @@
 <li>po najechaniu myszką ustaw godzinę 12:00:00</li>
 <li>[x] po kliknięciu rozpocznij animację rotacji wskazówek </li>
 </ul>
+<h3 id="zadanie-4">Zadanie 4</h3>
+<p>Przeczytać i <strong>zrozumieć</strong> <a href="https://css-tricks.com/svg-animation-on-css-transforms/">artykuł</a></p>
 <h2 id="podsumowanie">Podsumowanie</h2>
 <p>Transformacje:</p>
 <ul>
@@ -39,17 +41,18 @@
 <li>pochylenie</li>
 <li>rotacja</li>
 <li>skala</li>
+<li>perspektywa (*) - SVG nie obsługuje</li>
 </ul>
 <p>Transformacje CSS realizowane są przy wykorzystaniu :</p>
 <ul>
 <li>układu <a href="http://vector.org.pl/inkscape/t11/kartezjanski.png">kartezjańskiego</a></li>
 <li>układ współrzędnych <a href="http://vector.org.pl/inkscape/t11/sferyczny.png">sferycznych</a></li>
 </ul>
-<p>Właściwość CSS 'transform' przyjmuję listę transformacji. 
-Zadanie - jaka jest kolejność wykonywania? 
-Spróbuj wykonać: przesunięcie i rotację o 45stopni oraz rotację i przesunięcie.</p>
-<p><img src="./t11_files/translate.png">
-x,y,z - długość np. px, cm, mm, ..., %</p>
+<p>Właściwość CSS <code>transform</code> przyjmuję listę transformacji. </p>
+<p>Zadanie - jaka jest kolejność wykonywania? 
+Spróbuj wykonać: przesunięcie i rotację o 45 stopni oraz rotację i przesunięcie.</p>
+<p><img src="./t11_files/translate.png"></p>
+<p>x,y,z - długość np. px, cm, mm, ..., %</p>
 <ul>
 <li>translate(x,y) - posiada fallback, domyślnie 0</li>
 <li>translateX(x) </li>
@@ -57,16 +60,16 @@ x,y,z - długość np. px, cm, mm, ..., %</p>
 <li>translateZ(z)</li>
 <li>translate(x,y,z) - nie posiada fallbacka</li>
 </ul>
-<p><img src="./t11_files/scale.png">
-x, y, z - liczba</p>
+<p><img src="./t11_files/scale.png"></p>
+<p>x, y, z - liczba</p>
 <ul>
 <li>scale(x,y) x=y</li>
 <li>scaleX(x)</li>
 <li>scaleY(y)</li>
 <li>scale3d(x,y,z) - nie posiada fallbacka</li>
 </ul>
-<p><img src="./t11_files/rotate.png">
-x - kąt deg, rad</p>
+<p><img src="./t11_files/rotate.png"></p>
+<p>x - kąt deg, rad</p>
 <ul>
 <li>rotate(x)</li>
 <li>rotateZ(x)</li>
@@ -74,6 +77,16 @@ x - kąt deg, rad</p>
 <li>rotateY(x)</li>
 <li>rotate3d(x,y,z,deg)</li>
 </ul>
+<p><img src="./t11_files/skew.png"></p>
+<p>x - kąt</p>
+<ul>
+<li>skew(x,y) - domyslnie 0</li>
+<li>skewX(x)</li>
+<li>skewY(x)</li>
+</ul>
+<h3 id="punkt-odniesienia">Punkt odniesienia</h3>
+<p><img src="./t11_files/transformorigin.png"></p>
+<p>Ma zastosowanie do rotacji, pochylenia, skali. Nie ma zastosowania do przesunięcia. </p>
 <h3 id="style-css-w-svg">Style CSS w SVG</h3>
 <h4 id="zewn-trzny-arkusz-styli">Zewnętrzny arkusz styli</h4>
 <p>Przykładowy plik CSS</p>
@@ -124,6 +137,11 @@ x - kąt deg, rad</p>
         <span class="hljs-attribute">style</span>=<span class="hljs-value">"fill: red; stroke: blue; stroke-width: 3"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
 </code></pre>
+<h3 id="uwagi">Uwagi</h3>
+<p>Gdy używamy kopii obiektu, można wykorzystać konstrukcję:</p>
+<pre class="lang-xml hljs"><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#id"</span>/&gt;</span>
+</code></pre>
+<p>Należy jednak dodać przestrzeń nazw (<em>namespace</em>) <code>xmlns:xlink="http://www.w3.org/1999/xlink"</code></p>
 </div>
 
   <script src="./t11_files/jquery.min.js"></script>
