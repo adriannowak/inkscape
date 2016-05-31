@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:1337/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>t11.md</title>
+  <link rel="stylesheet" href="./t11_files/github-markdown.css">
+  <link rel="stylesheet" href="./t11_files/style.css">
+  <link rel="stylesheet" href="./t11_files/github.min.css">
+
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body>
+  <div class="markdown-body"><h3 id="zadanie-1">Zadanie 1</h3>
+<p>Dodaj trzy obiekty do pliku. </p>
+<p>Wykorzystując STYL <strong>wewnętrzny</strong> dokonaj następujących transformacji:</p>
+<ul>
+<li>pierwszy obiekt przesuń o 20% w lewo</li>
+<li>drugi obiekt przesuń 30% w prawo</li>
+<li>trzeci obiekt przesuń 30% w lewo i 20% w dół</li>
+</ul>
+<h3 id="zadanie-2">Zadanie 2</h3>
+<p>Wykorzystując STYL <strong>wewnętrzny</strong> dokonaj transformacji 3 obiektów:</p>
+<ul>
+<li>powiększ obiekt o 20% i przemieść o 100% w prawo (jedna linia)</li>
+<li>po najechaniu myszką na obiekt powiększ go o 10%</li>
+<li>po najechaniu myszką na obiekt zmień kolor na niebieski</li>
+</ul>
+<h3 id="zadanie-3">Zadanie 3</h3>
+<p>Wykonaj zegar analogowy. Stwórz wskazówki (minuta, godzina, sekundnik)</p>
+<p><img src="./t11_files/clock.png"></p>
+<ul>
+<li>ustaw godzinę 14:23:30</li>
+<li>po najechaniu myszką ustaw godzinę 12:00:00</li>
+<li>[x] po kliknięciu rozpocznij animację rotacji wskazówek </li>
+</ul>
+<h2 id="podsumowanie">Podsumowanie</h2>
+<p>Transformacje:</p>
+<ul>
+<li>przesunięcie</li>
+<li>pochylenie</li>
+<li>rotacja</li>
+<li>skala</li>
+</ul>
+<p>Transformacje CSS realizowane są przy wykorzystaniu :</p>
+<ul>
+<li>układu <a href="http://vector.org.pl/inkscape/t11/kartezjanski.png">kartezjańskiego</a></li>
+<li>układ współrzędnych <a href="http://vector.org.pl/inkscape/t11/sferyczny.png">sferycznych</a></li>
+</ul>
+<p>Właściwość CSS 'transform' przyjmuję listę transformacji. 
+Zadanie - jaka jest kolejność wykonywania? 
+Spróbuj wykonać: przesunięcie i rotację o 45stopni oraz rotację i przesunięcie.</p>
+<p><img src="./t11_files/translate.png">
+x,y,z - długość np. px, cm, mm, ..., %</p>
+<ul>
+<li>translate(x,y) - posiada fallback, domyślnie 0</li>
+<li>translateX(x) </li>
+<li>translateY(y)</li>
+<li>translateZ(z)</li>
+<li>translate(x,y,z) - nie posiada fallbacka</li>
+</ul>
+<p><img src="./t11_files/scale.png">
+x, y, z - liczba</p>
+<ul>
+<li>scale(x,y) x=y</li>
+<li>scaleX(x)</li>
+<li>scaleY(y)</li>
+<li>scale3d(x,y,z) - nie posiada fallbacka</li>
+</ul>
+<p><img src="./t11_files/rotate.png">
+x - kąt deg, rad</p>
+<ul>
+<li>rotate(x)</li>
+<li>rotateZ(x)</li>
+<li>rotateX(x)</li>
+<li>rotateY(x)</li>
+<li>rotate3d(x,y,z,deg)</li>
+</ul>
+<h3 id="style-css-w-svg">Style CSS w SVG</h3>
+<h4 id="zewn-trzny-arkusz-styli">Zewnętrzny arkusz styli</h4>
+<p>Przykładowy plik CSS</p>
+<pre class="lang-css hljs"><code class="lang-css"><span class="hljs-tag">rect</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">fill</span>:<span class="hljs-value"> red</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">stroke</span>:<span class="hljs-value"> blue</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">stroke-width</span>:<span class="hljs-value"> <span class="hljs-number">3</span>
+
+</span></span></span>}
+</code></pre>
+<p>Dokument SVG</p>
+<pre class="lang-xml hljs"><code class="lang-xml"><span class="hljs-pi">&lt;?xml version="1.0" standalone="no"?&gt;</span>
+<span class="hljs-pi">&lt;?xml-stylesheet href="mystyle.css" type="text/css"?&gt;</span>
+<span class="hljs-doctype">&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">version</span>=<span class="hljs-value">"1.1"</span>
+     <span class="hljs-attribute">width</span>=<span class="hljs-value">"10cm"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"5cm"</span> <span class="hljs-attribute">viewBox</span>=<span class="hljs-value">"0 0 1000 500"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">rect</span> <span class="hljs-attribute">x</span>=<span class="hljs-value">"200"</span> <span class="hljs-attribute">y</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"600"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"300"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+</code></pre>
+<p>Przykładowy <a href="https://www.w3.org/TR/SVG/images/styling/ExternalCSSStyleSheet.svg">plik SVG</a></p>
+<h4 id="wewn-trzny-arkusz-styli">Wewnętrzny arkusz styli</h4>
+<pre class="lang-xml hljs"><code class="lang-xml"><span class="hljs-pi">&lt;?xml version="1.0" standalone="no"?&gt;</span>
+<span class="hljs-doctype">&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">version</span>=<span class="hljs-value">"1.1"</span>
+     <span class="hljs-attribute">width</span>=<span class="hljs-value">"10cm"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"5cm"</span> <span class="hljs-attribute">viewBox</span>=<span class="hljs-value">"0 0 1000 500"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">defs</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span>&gt;</span><span class="css">&lt;!<span class="hljs-attr_selector">[CDATA[
+      rect {
+        fill: red;
+        stroke: blue;
+        stroke-width: 3
+      }</span>
+ </span><span class="hljs-tag">  <span class="hljs-title"> ]]&gt;&lt;</span>/</span>sty<span class="hljs-tag">le<span class="hljs-title">&gt;
+  </span>&lt;</span>/de<span class="hljs-tag">f<span class="hljs-title">s&gt;
+ </span> <span class="hljs-attribute">&lt;</span>r<span class="hljs-value">ect x</span>=<span class="hljs-attribute">"</span>2<span class="hljs-value">00" y</span>=<span class="hljs-attribute">"100"</span> <span class="hljs-value">width</span>=<span class="hljs-attribute">"600" </span>h<span class="hljs-value">eight</span>="</span>3<span class="hljs-tag">00<span class="hljs-title">"/&gt;</span>
+</span>&lt;/svg&gt;
+</code></pre>
+<p>Warto zauważyć, że <em>reguły</em> znajdują się w sekcji CDATA. </p>
+<p>Przykładowy <a href="https://www.w3.org/TR/SVG/images/styling/InternalCSSStyleSheet.svg">plik SVG</a></p>
+<h4 id="style-w-linii">Style w linii</h4>
+<pre class="lang-xml hljs"><code class="lang-xml"><span class="hljs-pi">&lt;?xml version="1.0" standalone="no"?&gt;</span>
+<span class="hljs-doctype">&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">version</span>=<span class="hljs-value">"1.1"</span>
+     <span class="hljs-attribute">width</span>=<span class="hljs-value">"10cm"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"5cm"</span> <span class="hljs-attribute">viewBox</span>=<span class="hljs-value">"0 0 1000 500"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">rect</span> <span class="hljs-attribute">x</span>=<span class="hljs-value">"200"</span> <span class="hljs-attribute">y</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"600"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"300"</span> 
+        <span class="hljs-attribute">style</span>=<span class="hljs-value">"fill: red; stroke: blue; stroke-width: 3"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+</code></pre>
+</div>
+
+  <script src="./t11_files/jquery.min.js"></script>
+  <script src="./t11_files/socket.io.js"></script>
+  <script src="./t11_files/highlight.min.js"></script>
+  <script>
+
+    var socket = io.connect('http://localhost')
+
+    hljs.configure({languages: []})
+
+    socket.on('content', function(data){
+      $('.markdown-body').html(data)
+      $('code').each(function(_, block){
+        $(this).parent().addClass($(this).attr('class'))
+      })
+      $('pre').each(function(_, block){
+        hljs.highlightBlock(block);
+      })
+    })
+    socket.on('title', function(data){
+      $('title').html(data)
+    })
+    socket.on('kill', function(){
+      window.open('', '_self', '');
+      window.close();
+    })
+  </script>
+
+
+</body></html>
