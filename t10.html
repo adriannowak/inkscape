@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:1337/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>t10.md</title>
+  <link rel="stylesheet" href="./t10_files/github-markdown.css">
+  <link rel="stylesheet" href="./t10_files/style.css">
+  <link rel="stylesheet" href="./t10_files/github.min.css">
+
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body>
+  <div class="markdown-body"><h3 id="zadanie-1">Zadanie 1</h3>
+<p>Wykonaj animacje poruszajacej sie pileczki po obwodzie kwadratu</p>
+<h3 id="zadanie-2">Zadanie 2</h3>
+<p>Wykonaj animacje poruszajacej sie pileczki</p>
+<pre class="lang-html hljs xml"><code class="lang-html">M91.4,104.2c3.2-3.4,18.4-0.6,23.4-0.6c5.7,0.1,10.8,0.9,16.3,2.3
+    c13.5,3.5,26.1,9.6,38.5,16.2c12.3,6.5,21.3,16.8,31.9,25.4c10.8,8.7,21,18.3,31.7,26.9c9.3,7.4,20.9,11.5,31.4,16.7
+    c13.7,6.8,26.8,9.7,41.8,9c21.4-1,40.8-3.7,61.3-10.4c10.9-3.5,18.9-11.3,28.5-17.8c5.4-3.7,10.4-6.7,14.8-11.5
+    c1.9-2.1,3.7-5.5,6.5-6.5"
+</code></pre>
+<h3 id="zadanie-3">Zadanie 3</h3>
+<p>Wykonaj animacje poruszajacego sie statku kosmicznego
+<img src="./t10_files/svg-animate-along-path-600.gif"></p>
+<h3 id="podsumowanie">Podsumowanie</h3>
+<p>Przyklad:</p>
+<pre class="lang-html hljs xml"><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">animateMotion</span> 
+           <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#circle"</span>
+           <span class="hljs-attribute">dur</span>=<span class="hljs-value">"1s"</span>
+           <span class="hljs-attribute">begin</span>=<span class="hljs-value">"click"</span>
+           <span class="hljs-attribute">fill</span>=<span class="hljs-value">"freeze"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">mpath</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#motionPath"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">animateMotion</span>&gt;</span>
+</code></pre>
+<p><a href="https://www.sitepoint.com/closer-look-svg-path-data/">Jak budowac path data?</a></p>
+</div>
+
+  <script src="./t10_files/jquery.min.js"></script>
+  <script src="./t10_files/socket.io.js"></script>
+  <script src="./t10_files/highlight.min.js"></script>
+  <script>
+
+    var socket = io.connect('http://localhost')
+
+    hljs.configure({languages: []})
+
+    socket.on('content', function(data){
+      $('.markdown-body').html(data)
+      $('code').each(function(_, block){
+        $(this).parent().addClass($(this).attr('class'))
+      })
+      $('pre').each(function(_, block){
+        hljs.highlightBlock(block);
+      })
+    })
+    socket.on('title', function(data){
+      $('title').html(data)
+    })
+    socket.on('kill', function(){
+      window.open('', '_self', '');
+      window.close();
+    })
+  </script>
+
+
+</body></html>
